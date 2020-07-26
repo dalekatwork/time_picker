@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:time_picker/components/index.dart';
 
 void main() {
   runApp(MyApp());
@@ -50,9 +51,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _hourCounter = 0;
-  int _minuteCounter = 0;
-
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -86,11 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-          ],
+          children: const <Widget>[TimePicker()],
         ),
       ),
     );
